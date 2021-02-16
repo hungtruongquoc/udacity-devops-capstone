@@ -1,0 +1,32 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::723567309652:role/eksctl-EKS-udacity-capston-cluste-NodeInstanceRole-17A1A9D7SA2NZ
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - userarn: arn:aws:iam::723567309652:user/k8s-cluster-admin
+      username: k8s-cluster-admin
+      groups:
+        - system:masters
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2021-02-09T13:53:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:mapRoles: {}
+        f:mapUsers: {}
+    manager: eksctl
+    operation: Update
+    time: "2021-02-09T13:53:31Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "1516"
+  selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
+  uid: e5a549b6-5aa5-4b0d-9339-457d4a862143
