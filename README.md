@@ -18,6 +18,11 @@ The microservice used in the deployment is hosted at the folder [`project-ml-mic
 [The CI/CD script](https://github.com/hungtruongquoc/DevOps_Microservices/blob/master/.circleci/config.yml) is hosted in 
 the [root folder](https://github.com/hungtruongquoc/DevOps_Microservices) of the repository of the microservice.
 
+# The CI/CD Result
+
+Screenshots of the CI/CD process are stored in `screenshots` folder. The result of each step are marked with sequential 
+index from `1` to `6`. There are also 2 screenshots showing the CloudFormation stack of the Kubernetes cluster and node group.
+
 # Notes
 
 eksctl needs following environment variables:
